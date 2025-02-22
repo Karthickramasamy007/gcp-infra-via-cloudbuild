@@ -4,7 +4,7 @@ provider "google" {
 }
 
 resource "google_storage_bucket" "my_bucket" {
-  name          = "my-unique-bucket-name"  # Ensure this name is globally unique
+  name          = "my-unique-bucket-name-karthick"  # Ensure this name is globally unique
   location      = "europe-west1"
   storage_class = "STANDARD"
 
