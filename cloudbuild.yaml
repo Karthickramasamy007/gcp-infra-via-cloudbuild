@@ -1,0 +1,19 @@
+steps:
+  # Step 1: Set up Terraform (Initialize)
+  - name: 'hashicorp/terraform:light'
+    id: 'Terraform Init'
+    args: ['init']
+
+  # Step 2: Terraform Plan (to check the changes)
+  - name: 'hashicorp/terraform:light'
+    id: 'Terraform Plan'
+    args: ['plan', '-out=terraform.plan']
+
+  # Step 3: Terraform Apply (to create the resources)
+  - name: 'hashicorp/terraform:light'
+    id: 'Terraform Apply'
+    args: ['apply', '-auto-approve', 'terraform.plan']
+
+# Optionally, set up logs for better visibility
+options:
+  logging: CLOUD_LOGGING_ONLY
