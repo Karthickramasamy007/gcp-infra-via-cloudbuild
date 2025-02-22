@@ -1,5 +1,5 @@
 provider "google" {
-  project     = "<YOUR_PROJECT_ID>"  # Replace with your Google Cloud project ID
+  project     = "dev-demo-proj-1-id"  #  Replace with your Google Cloud project ID
   region      = "us-central1"        # Choose the region for your bucket
 }
 
